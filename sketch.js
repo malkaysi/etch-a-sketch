@@ -62,9 +62,11 @@ function resetGrid(){
         node.parentNode.removeChild(node);
     })
 
-    let numColumns = prompt("How many rows/columns do you want for your etch-a-sketch?")
+
+    do{
+        numColumns = prompt("How many rows/columns do you want for your etch-a-sketch? (Max: 25)", 10)
+    } while (numColumns > 25);
 
     createGrid(numColumns);
 
-    // Test
 }
